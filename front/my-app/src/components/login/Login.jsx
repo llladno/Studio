@@ -17,6 +17,7 @@ function Login() {
             passwd: passwd
         })
         let status = res.data
+
         if (status[0] === "ok") {
             sessionStorage.setItem('id', status[1].id)
             sessionStorage.setItem('login', status[1].login)

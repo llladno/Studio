@@ -51,12 +51,16 @@ app.post("/upload/photo", (req, res) => {
     //     if (err) console.log(err)
     //   })
     // ;
-    const file = req.files.file
-    file.mv(`${__dirname}/files/${req.files.file.name}`, err => {
+        const file = req.files.file
+        file.mv(`${__dirname}/files/${req.files.file.name}`, err => {
+            console.log(err)
+        })
+        console.log(req.files.file)
+        res.send(file)
+    // // else{
+    //     console.log(req.body)}
 
-    })
-    console.log(req.files.file)
-    res.send(file)
+
     // res.send(req.body)
 })
 

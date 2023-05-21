@@ -6,6 +6,7 @@ import Login from './components/login/Login.jsx';
 import LoginHome from './components/login/Home/LoginHome';
 import LoginOrder from "./components/login/Home/LoginOrder";
 import LoginRegister from "./components/login/Register/LoginRegister";
+import PagePhotographer from "./components/Photographer/PagePhotographer";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path='/login/home' element={<LoginHome></LoginHome>}></Route>
                 <Route path='/login/order' element={<LoginOrder></LoginOrder>}></Route>
                 <Route path='/login/register' element={<LoginRegister></LoginRegister>}></Route>
+                <Route path='/home/photographer' element={<PagePhotographer></PagePhotographer>}></Route>
             </Routes>
         </div>
     );

@@ -1,16 +1,18 @@
 const express = require("express");
 const cors = require("cors");
 const {Client} = require("pg")
-const fs = require("fs")
 const bodyParser = require("body-parser")
 const fileUpload = require("express-fileupload")
+const fs = require('fs');
+const path = require('path');
 
 const client = new Client({
     host: 'localhost',
     port: 5432,
     database: 'postgres',
     user: 'postgres',
-    password: 'qwerty12',
+    // password: 'qwerty12',
+    password:'qwerty'
 })
 
 const app = express()
@@ -51,12 +53,14 @@ app.post("/upload/photo", (req, res) => {
     //     if (err) console.log(err)
     //   })
     // ;
-        const file = req.files.file
-        file.mv(`${__dirname}/files/${req.files.file.name}`, err => {
-            console.log(err)
-        })
-        console.log(req.files.file)
-        res.send(file)
+        console.log(req.body.user)
+        for(let n = 0; n < req.files.file.length; n++){
+            const file = req.files.file[n]
+            file.mv(`${__dirname}/files/${req.body.user[n]}/${req.files.file[n].name}`, err => {
+                console.log(err)
+            })
+        }
+        res.send("ok")
     // // else{
     //     console.log(req.body)}
 
@@ -74,6 +78,42 @@ app.get("/download/photo", (req, re) => {
 
 })
 
+app.use("/photos", express.static(__dirname + "/files"))
+
+app.post("/user/getPhotos", (req,res)=>{
+    const folder = req.body.login;
+  const folderPath = path.join(__dirname, 'files/' + folder);
+  // Читаем содержимое папки
+  fs.readdir(folderPath, (err, files) => {
+    if (err) {
+      console.error('Ошибка чтения папки', err);
+      res.status(500).send('Ошибка сервера');
+    } else {
+      // Отправляем список файлов на фронтенд
+      res.json(files);
+    }
+  });
+    // const folder = req.body.login;
+    // const filename = '1.jpeg'
+    // const imagePath = path.join(__dirname, 'files/' + folder, filename);
+    
+    // res.sendFile(imagePath);
+
+    // const filePath = `/files/${req.body.login}`; // Укажите путь к файлу, который вы хотите отправить
+    // const fileName = '*'; // Укажите имя файла, которое будет видно на фронтенде
+  
+    // const fullPath = path.join(__dirname, filePath); // Полный путь к файлу
+    // const fileStream = fs.createReadStream(fullPath); // Создание потока чтения файла
+    // console.log(filePath)
+    // console.log(fileStream)
+    // res.setHeader('Content-Disposition', `attachment; filename="${fileStream}"`); // Установка заголовка Content-Disposition для указания имени файла при загрузке  
+    // // fileStream.pipe(res); // Перенаправление потока файла на ответ res
+    // fileStream.pipe(res); // Перенаправление потока файла на ответ res
+    // console.log(__dirname)
+    // console.log(req.body.login)
+    // const da = app.use('user/getPhotos',express.static(__dirname, + `/file/${req.body.login}`))
+    // console.log(da)
+})
 
 app.post('/login', (req, res) => {
     const verLogin = req.body

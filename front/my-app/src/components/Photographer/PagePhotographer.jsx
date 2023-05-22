@@ -10,18 +10,22 @@ const PagePhotographer = () => {
     function change(e) {
         let input = document.getElementsByTagName("input")[0]
         console.log(e.target.files[0])
-        setphotoFile(e.target.files[0])
+        console.log(e.target.files)
+        setphotoFile(e.target.files)
 
     }
 
     const getPhoto = async () => {
-        let suuuu = document.getElementsByClassName("suuuu")
-
+        let suuu = document.getElementsByClassName("suuu")[0].value
+        console.log(suuu)
         const formData = new FormData();
         console.log(formData)
         console.log(photoFile)
-
-        formData.append("file", photoFile)
+        for(let b = 0; b < photoFile.length;b++){
+            formData.append("file", photoFile[b])
+            formData.append("user", `${suuu}`)
+        }
+        
 
         const res = await axios.post("http://localhost:3005/upload/photo", formData,
             {
@@ -29,16 +33,15 @@ const PagePhotographer = () => {
                     'Content-Type': 'multipart/form-data'
                 }
             })
-        const data222 = res
-        console.log(data222.data.data.data)
-        suuuu.src = data222
     }
 
     return (
         <div>
             <Bar></Bar>
             <div>
-                <input onChange={change} type='file'></input>
+                <input onChange={change} type='file' multiple="multiple"></input>
+                <p>Введите Login клиента</p>
+                <input className='suuu'></input>
                 <button onClick={getPhoto}>Отправить фото</button>
             </div>
         </div>

@@ -89,8 +89,11 @@ ul {
 .sendData {
     font-size: 24px;
     background: #0D0D0D;
+    float: right;
     color: #FFFFFF;
     padding: 10px 40px;
+    margin-right: 22%;
+    margin-top: 20px;
     border: 2px solid #e3e3e3;
 }
 

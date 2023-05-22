@@ -70,17 +70,19 @@ function LoginHome() {
     return (
         <div>
             <Bar></Bar>
-            <div>
-            <div style={{display:'flex',justifyContent:"center"}}>
-                <button onClick={show} className='bronir' >Выбрать время</button>
-                <a href='/login/order'><button className='bronir'> Мои записи</button></a>
-                <a href='/login'><button onClick={exit} className='bronir'>Выйти из аккаунта</button></a>
-            </div>
+            <div><div style={{display:'flex'}}>
+                <div style={{width:500}}>
+                    <button onClick={show} className='bronir' >Выбрать время</button>
+                    <a href='/login/order'><button className='bronir'> Мои записи</button></a>
+                    <a href='/login/photos'><button className='bronir'>Мои фотографии</button></a>
+                    <a href='/login'><button onClick={exit} className='bronir'>Выйти из аккаунта</button></a>
+                </div>
                 <div style={{display:"flex",justifyContent:'center'}}>
                     <div className="dis">
                         <div onClick={clickDate} className="sud">
                         </div>
                     </div>
+                </div>
                 </div>
             <button onClick={sendData} className='sendData'>Забронировать</button>
             </div>

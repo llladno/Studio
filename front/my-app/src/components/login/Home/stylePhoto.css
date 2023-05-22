@@ -1,0 +1,30 @@
+.photo{
+    display: grid;
+    width: 90%;
+    grid-template-columns: 30% 30% 30%;
+    gap: 5%;
+}
+
+.photo img{
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.container{
+    display: flex;
+    margin-top: 100px;
+}
+
+
+.btnmenu{
+    width: 200px;
+    min-height: 50px;
+    padding: 10px 2px;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 50px;
+    margin-left: 70px;
+
+    background: #0D0D0D;
+}

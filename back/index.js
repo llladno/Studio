@@ -11,8 +11,8 @@ const client = new Client({
     port: 5432,
     database: 'postgres',
     user: 'postgres',
-    // password: 'qwerty12',
-    password:'qwerty'
+    password: 'qwerty12',
+    // password:'qwerty'
 })
 
 const app = express()
@@ -83,6 +83,7 @@ app.use("/photos", express.static(__dirname + "/files"))
 app.post("/user/getPhotos", (req,res)=>{
     const folder = req.body.login;
   const folderPath = path.join(__dirname, 'files/' + folder);
+  console.log("se")
   // Читаем содержимое папки
   fs.readdir(folderPath, (err, files) => {
     if (err) {
@@ -90,6 +91,11 @@ app.post("/user/getPhotos", (req,res)=>{
       res.status(500).send('Ошибка сервера');
     } else {
       // Отправляем список файлов на фронтенд
+        console.log("su")
+        files = {
+            files : files,
+            folder : folder
+        }
       res.json(files);
     }
   });

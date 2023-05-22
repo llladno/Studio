@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "axios"
 import Bar from "../mainPage/Bar";
 import {useState} from "react";
 
@@ -12,6 +12,7 @@ function Login() {
     async function clickLogin() {
         let login = document.getElementById("login").value
         let passwd = document.getElementById("passwd").value
+        console.log("dsdas")
         const res = await axios.post("http://localhost:3005/login", {
             login: login,
             passwd: passwd

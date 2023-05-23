@@ -50,7 +50,7 @@ ul {
 
 .dis {
 
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     height: 550px;
@@ -65,6 +65,10 @@ ul {
     height: 100%;
     color: #000000;
     border: 1px solid rgba(30, 30, 30, 0.75);
+}
+
+.sud button:hover {
+    background: #e7e7e7;
 }
 
 
@@ -88,6 +92,7 @@ ul {
 }
 
 .sendData {
+    display: none;
     font-size: 24px;
     background: #0D0D0D;
     float: right;

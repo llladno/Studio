@@ -30,6 +30,7 @@ ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
+    padding: 0px;
 }
 
 
@@ -103,5 +104,24 @@ button p {
     height: 100%;
 }
 
+.pframestudiobtn{
+    margin-top: 250px;
+    margin-left: 15%;
+}
+
+.pframestudiobtn h1{
+    font-size: 40px;
+}
+
+.pframestudiobtn button{
+    padding: 10px 50px;
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid black;
+}
+
+.pframestudiobtn button:hover{
+    background: rgba(162, 162, 162, 0.45);
+}
 
 

@@ -19,9 +19,6 @@ const LoginPhotos = () => {
     },[])
 
     function show(e){
-        console.log("su")
-        console.log(loading)
-        console.log(myPhoto)
         e.target.style.display = "none"
         if(loading == true) {
             console.log(myPhoto)

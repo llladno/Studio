@@ -28,3 +28,15 @@
 
     background: #0D0D0D;
 }
+
+a{
+    text-decoration: none;
+}
+
+.pframe{
+    color: #FFFFFF;
+}
+
+.login{
+    color: #0D0D0D;
+}

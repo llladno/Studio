@@ -2,21 +2,22 @@
 import "./Home.css"
 
 function Bar() {
+
     return (
       <div className="barcenter">
-        <div>
-            LOGO
+        <div style={{width:15+'%'}}>
+            <a href='/' className='pframe'>PFrame Studio</a>
         </div>
         <div className="barul">
             <ul>
-                <li>О нас</li>
+                <li>о нас</li>
                 <li>студия</li>
-                <li>галлерея</li>
+                <li>галерея</li>
                 <li>контакты</li>
             </ul>
         </div>
-        <div>
-            <button><a href="/login">Войти</a></button>
+        <div style={{width:15+'%'}}>
+            <button className='login'><a href="/login">Войти</a></button>
         </div>
       </div>
     );

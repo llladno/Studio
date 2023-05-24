@@ -11,8 +11,8 @@ const client = new Client({
     port: 5432,
     database: 'postgres',
     user: 'postgres',
-    password: 'qwerty12',
-    // password:'qwerty'
+    // password: 'qwerty12',
+    password:'qwerty'
 })
 
 const app = express()
@@ -77,6 +77,7 @@ app.get("/download/photo", (req, re) => {
     ;
 
 })
+
 
 app.use("/photos", express.static(__dirname + "/files"))
 

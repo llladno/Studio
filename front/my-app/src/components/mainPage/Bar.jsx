@@ -16,7 +16,7 @@ function Bar() {
                 <li>контакты</li>
             </ul>
         </div>
-        <div style={{width:15+'%'}}>
+        <div style={{width:15+'%',display:'flex', justifyContent:'center'}}>
             <button className='login'><a href="/login">Войти</a></button>
         </div>
       </div>

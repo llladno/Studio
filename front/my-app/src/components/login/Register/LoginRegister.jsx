@@ -2,6 +2,7 @@ import React from 'react';
 import Bar from "../../mainPage/Bar.jsx";
 import {AddUser} from "./AddUser";
 import axios from "axios";
+import './Login.css'
 
 
 const LoginRegister = () => {
@@ -71,7 +72,7 @@ const LoginRegister = () => {
                             </div>
                         </div>
                         <div className="btnStyle">
-                            <button onClick={click}>Зарегистрироваться</button>
+                            <button className='btn' onClick={click}>Зарегистрироваться</button>
                         </div>
                         <div className="uncorrect"></div>
                     </div>

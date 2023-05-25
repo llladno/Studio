@@ -42,14 +42,20 @@ function Login() {
             <Bar></Bar>
             <div>
                 <div>{loading ? <p>loading...</p>
-                    : <div>
-                        <p>login</p>
-                        <input id="login"></input>
-                        <p>Passwd</p>
-                        <input id="passwd"></input>
-                        <div>
-                            <button onClick={clickLogin}>Войти</button>
-                            <button onClick={regis}>Зарегистрироваться</button>
+                    : <div className='container2'>
+                        <div className='stylelogin'>
+                            <p>login</p>
+                            <input id="login"></input>
+                            <p>Passwd</p>
+                            <input id="passwd"></input>
+                            <div>
+                                <div>
+                                    <button className='btn' onClick={clickLogin}>Войти</button>
+                                </div>
+                                <div>
+                                    <button className='btn' onClick={regis}>Зарегистрироваться</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 }

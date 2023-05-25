@@ -11,8 +11,8 @@ const client = new Client({
     port: 5432,
     database: 'postgres',
     user: 'postgres',
-    // password: 'qwerty12',
-    password:'qwerty'
+    password: 'qwerty12',
+    // password:'qwerty'
 })
 
 const app = express()
@@ -179,7 +179,6 @@ app.post("/user/order", (req, re) => {
     console.log(req.body.userId)
     client.query(`SELECT * FROM public.shooting WHERE id_user = '${+req.body.userId}';`, (err, res) => {
         if (err) console.log(err)
-        console.log(res)
         re.send(res.rows)
     })
 })
@@ -193,4 +192,12 @@ app.post("/user/registration", (req, re) => {
         (err,res) =>{
         if (err) console.log(err)
     })
+})
+
+app.post('/delete/order',(req,re) =>{
+    const info = req.body
+    console.log(info)
+    client.query(`DELETE FROM public.shooting
+        WHERE id_user = ${info.user} AND day = '${info.day}';`,
+        (err,res)=>console.log(err))
 })

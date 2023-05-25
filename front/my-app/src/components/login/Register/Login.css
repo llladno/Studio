@@ -1,0 +1,46 @@
+.container2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btnStyle{
+    display: flex;
+    justify-content: center;
+}
+
+.stylelogin{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#login{
+    max-width: 100%;
+    width: 97%;
+    border-radius: 0px;
+    border: 2px solid #0D0D0D;
+    height: 30px;
+}
+#passwd{
+    width: 97%;
+    border-radius: 0px;
+    border: 2px solid #0D0D0D;
+    height: 30px;
+}
+.btn {
+    width: 300px;
+    font-size: 24px;
+    background: #0D0D0D;
+    color: #FFFFFF;
+    height: 70px;
+    padding: 10px 20px;
+    border: 2px solid #e3e3e3;
+    margin-top: 20px;
+}
+
+.styleLogin2 input{
+    max-width: 100%;
+    width: 97%;
+    border-radius: 0px;
+    border: 2px solid #0D0D0D;
+    height: 30px;
+}

@@ -64,19 +64,19 @@ function LoginHome() {
         }
     }
 
-    function sendData() {
+    function sendData(e) {
         axios.post("http://localhost:3005/photosession/order", {
             id_user: sessionStorage.getItem('id'),
             date: selectData
         })
-        // e.target.textContent = 'Обработка...'
-        // setTimeout(()=>{
-        //     e.target.textContent = 'Вы записаны!'
-        //     e.target.style.background = "#0FC65C"
-        // },1000)
-        // setTimeout(()=>{
-        //     window.location = '/login/order'
-        // },1000)
+        e.target.textContent = 'Обработка...'
+        setTimeout(()=>{
+            e.target.textContent = 'Вы записаны!'
+            e.target.style.background = "#0FC65C"
+        },1000)
+        setTimeout(()=>{
+            window.location = '/login/order'
+        },1000)
         
     }
 
@@ -92,8 +92,8 @@ function LoginHome() {
         <div>
             <Bar></Bar>
             <div>
-                <div style={{ display: 'flex' }}>
-                    <div style={{ width: 500 }}>
+                <div style={{ display: 'flex',marginTop:50}}>
+                    <div style={{ width: 500,marginLeft:5+'%'}}>
                         <button onClick={show} className='bronir'>Выбрать время</button>
                         <a href='/login/order'>
                             <button className='bronir'> Мои записи</button>

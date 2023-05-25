@@ -1,0 +1,20 @@
+.app {
+    background:
+        /* top, transparent black, faked with gradient */
+            linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.2)
+            ),
+                /* bottom, image */
+            url('./../img/image1.png');
+transition: background-color 0.3s ease-in-out;
+}
+
+.app.scroll-down {
+
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+            url('./../img/image1.png'); /* Затемненный фон */
+
+}

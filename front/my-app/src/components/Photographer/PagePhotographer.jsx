@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Bar from "../mainPage/Bar";
 import axios from "axios";
+import './PagePhotographer.css'
 
 
 const PagePhotographer = () => {
@@ -21,11 +22,11 @@ const PagePhotographer = () => {
         const formData = new FormData();
         console.log(formData)
         console.log(photoFile)
-        for(let b = 0; b < photoFile.length;b++){
+        for (let b = 0; b < photoFile.length; b++) {
             formData.append("file", photoFile[b])
             formData.append("user", `${suuu}`)
         }
-        
+
 
         const res = await axios.post("http://localhost:3005/upload/photo", formData,
             {
@@ -38,11 +39,19 @@ const PagePhotographer = () => {
     return (
         <div>
             <Bar></Bar>
-            <div>
-                <input onChange={change} type='file' multiple="multiple"></input>
-                <p>Введите Login клиента</p>
-                <input className='suuu'></input>
-                <button onClick={getPhoto}>Отправить фото</button>
+            <div style={{display: 'flex', justifyContent: 'center'}}>
+                <div>
+                    <p>Выберете фалы</p>
+                    <label className='custom-file-upload'>
+                        Выбрать
+                        <input onChange={change} type='file' multiple="multiple" className='custom-file-upload'></input>
+                    </label>
+                    <p>Введите Login клиента</p>
+                    <input className='suuu'></input>
+                    <div>
+                        <button onClick={getPhoto} className='btn'>Отправить фото</button>
+                    </div>
+                </div>
             </div>
         </div>
     );

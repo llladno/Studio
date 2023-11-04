@@ -9,7 +9,7 @@ function LoginOrder() {
     const [loadging ,setLoading] = useState(false)
     useEffect(()=>{
         async function get (){
-            const res = await axios.post("http://localhost:3005/user/order",{
+            const res = await axios.post("http://109.68.215.157:3005/user/order",{
                 userId :sessionStorage.getItem('id')
             })
             console.log(res.data)

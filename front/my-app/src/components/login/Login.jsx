@@ -13,7 +13,7 @@ function Login() {
         let login = document.getElementById("login").value
         let passwd = document.getElementById("passwd").value
         console.log("dsdas")
-        const res = await axios.post("http://localhost:3005/login", {
+        const res = await axios.post("http://109.68.215.157:3005/login", {
             login: login,
             passwd: passwd
         })

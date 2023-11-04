@@ -9,7 +9,7 @@ const LoginPhotos = () => {
 
     async function getPhoto() {
         let err = "notErr"
-        const res = await axios.post("http://localhost:3005/user/getPhotos", {
+        const res = await axios.post("http://109.68.215.157:3005/user/getPhotos", {
             login: sessionStorage.getItem('login')
         }).catch(e => {
             err = "ERROR"
@@ -37,7 +37,7 @@ const LoginPhotos = () => {
             console.log(myPhoto)
             console.log(photo)
             for (let c = 0; c < myPhoto.files.length; c++) {
-                photo.innerHTML += `<img src="http://localhost:3005/photos/${myPhoto.folder}/${myPhoto.files[c]}">`
+                photo.innerHTML += `<img src="http://109.68.215.157:3005/photos/${myPhoto.folder}/${myPhoto.files[c]}">`
             }
         }
     }

@@ -1,7 +1,7 @@
 
 exports.elliss = async (event, setSelectData, data, axios, sud, day) => {
     setSelectData(event.target.textContent + data)
-    const selectedDate = await axios.post("http://localhost:3005/selectedDate", {
+    const selectedDate = await axios.post("http://109.68.215.157:3005/selectedDate", {
         day: event.target.textContent
     })
     let time2 = 12

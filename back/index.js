@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 const client = new Client({
-    host: 'localhost',
+    host: '109.68.215.157',
     port: 5432,
     database: 'postgres',
     user: 'postgres',

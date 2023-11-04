@@ -23,7 +23,7 @@ const LoginShowData = (props) => {
     function deleteOrder(e){
         let user = sessionStorage.getItem("id")
         console.log(e.target.id)
-        axios.post('http://localhost:3005/delete/order',{
+        axios.post('http://109.68.215.157:3005/delete/order',{
             user: user,
             day: e.target.id
         })

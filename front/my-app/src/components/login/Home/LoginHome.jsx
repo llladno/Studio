@@ -65,7 +65,7 @@ function LoginHome() {
     }
 
     function sendData(e) {
-        axios.post("http://localhost:3005/photosession/order", {
+        axios.post("http://109.68.215.157:3005/photosession/order", {
             id_user: sessionStorage.getItem('id'),
             date: selectData
         })

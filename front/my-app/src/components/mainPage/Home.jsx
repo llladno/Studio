@@ -19,7 +19,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className='aboutusHome'>
+            <div className='aboutusHome' id='about'>
                 <h1>О нас</h1>
                 <p>PFrame Studio - это современная фотостудия, специализирующаяся на создании
                 профессиональных фотографий и видеозаписей для различных мероприятий и событий.

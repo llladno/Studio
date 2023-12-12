@@ -10,6 +10,7 @@ import LoginRegister from "./components/login/Register/LoginRegister";
 import PagePhotographer from "./components/Photographer/PagePhotographer";
 import LoginPhotos from './components/login/Home/LoginPhotos';
 import Develop from "./components/mainPage/Develop";
+import StudioPage from "./components/otherPages/StudioPage";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                 <Route path='/home/photographer' element={<PagePhotographer></PagePhotographer>}></Route>
                 <Route path='/login/photos' element={<LoginPhotos></LoginPhotos>}></Route>
                 <Route path='/develop' element={<Develop/>}></Route>
+                <Route path='/studio' element={<StudioPage/>}></Route>
             </Routes>
         </div>
     );

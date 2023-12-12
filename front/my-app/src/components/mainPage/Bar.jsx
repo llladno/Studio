@@ -11,10 +11,10 @@ function Bar() {
         </div>
         <div className="barul">
             <ul>
-                <li><a href='/develop'>о нас</a></li>
-                <li><a href='/develop'>студия</a></li>
+                <li><a href='#about'>о нас</a></li>
+                <li><a href='/studio'>студия</a></li>
                 <li><a href='/develop'>галерея</a></li>
-                <li><a href='/develop'>контакты</a></li>
+                <li><a href='/contacts'>контакты</a></li>
             </ul>
         </div>
         <div style={{width:15+'%',display:'flex', justifyContent:'center'}}>

@@ -1,0 +1,17 @@
+.studioPageFlex{
+    margin-top: 50px;
+    display: grid;
+    width: 100%;
+    justify-items: center;
+}
+
+
+.studioPageFlex p, .studioPageFlex > img{
+    text-align: justify;
+    width: 50%;
+}
+
+.studioPageFlex img{
+    border-radius: 15px;
+    border: #0D0D0D 3px solid;
+}

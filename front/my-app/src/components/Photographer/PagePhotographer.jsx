@@ -10,18 +10,12 @@ const PagePhotographer = () => {
 
     function change(e) {
         let input = document.getElementsByTagName("input")[0]
-        console.log(e.target.files[0])
-        console.log(e.target.files)
         setphotoFile(e.target.files)
-
     }
 
     const getPhoto = async () => {
         let suuu = document.getElementsByClassName("suuu")[0].value
-        console.log(suuu)
         const formData = new FormData();
-        console.log(formData)
-        console.log(photoFile)
         for (let b = 0; b < photoFile.length; b++) {
             formData.append("file", photoFile[b])
             formData.append("user", `${suuu}`)

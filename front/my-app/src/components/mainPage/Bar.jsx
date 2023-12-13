@@ -14,7 +14,7 @@ function Bar() {
                 <li><a href='#about'>о нас</a></li>
                 <li><a href='/studio'>студия</a></li>
                 <li><a href='/develop'>галерея</a></li>
-                <li><a href='/contacts'>контакты</a></li>
+                <li><a href='#contacts'>контакты</a></li>
             </ul>
         </div>
         <div style={{width:15+'%',display:'flex', justifyContent:'center'}}>

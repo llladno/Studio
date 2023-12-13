@@ -12,7 +12,7 @@ function LoginOrder() {
             const res = await axios.post("http://109.68.215.157:3005/user/order",{
                 userId :sessionStorage.getItem('id')
             })
-            console.log(res.data)
+
             setGetData(res.data)
             setLoading(true)
         }

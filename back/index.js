@@ -46,7 +46,9 @@ app.get("/user", (req, re) => {
         re.send(res.rows)
     })
 })
-
+app.get('/',(req,res)=>{
+    res.send('<h1>Studio Server Active</h1>')
+})
 app.post("/upload/photo", (req, res) => {
     // client.query(`INSERT INTO public.testphoto(photo)
     //     VALUES ('${req.body.data}');`, (err, res) => {

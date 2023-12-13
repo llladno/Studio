@@ -17,12 +17,11 @@ const LoginRegister = () => {
         if (passwd[0].value == passwd[1].value) {
             if (email.value && name.value && login.value && passwd.value != "") {
                 data.push(name.value, email.value, number.value,passwd[0].value,login.value)
-                console.log(data)
                 AddUser(data, axios)
                 window.location.href = "/login"
                 data.length = 0
             } else {
-                console.log("not ok")
+
             }
         } else {
             let uncorrect = document.getElementsByClassName("uncorrect")[0]

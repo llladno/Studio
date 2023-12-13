@@ -1,6 +1,6 @@
 
 exports.AddUser = (data,axios)=>{
-    console.log(data)
+
     axios.post("http://109.68.215.157:3005/user/registration",{
         name:data[0],
         mail:data[1],

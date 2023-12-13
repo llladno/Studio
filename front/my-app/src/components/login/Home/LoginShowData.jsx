@@ -22,7 +22,6 @@ const LoginShowData = (props) => {
 
     function deleteOrder(e){
         let user = sessionStorage.getItem("id")
-        console.log(e.target.id)
         axios.post('http://109.68.215.157:3005/delete/order',{
             user: user,
             day: e.target.id
@@ -30,14 +29,12 @@ const LoginShowData = (props) => {
         window.location.reload();
 
     }
-    console.log(newmass)
     newmass.sort()
     return (
         <div className='containerorder'>
             <div className='styleContainer'>
                 <h2>Вы записанны</h2>
                 {newmass.map((x) => {
-                    console.log(newmass)
                     let mas = []
                     data.map((c) => {
                         if (c.day === x) mas.push(c.date)

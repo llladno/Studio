@@ -34,7 +34,7 @@ function Home() {
                     Мы также предоставляем услуги видеосъемки, монтажа и создания видеоклипов.</p>
             </div>
             <div className='miyag'>
-                <div className='barbutton'>
+                <div className='barbutton' id='contacts'>
                     <div>
                         <p>E-MAIL: testmail@gmail.com</p>
                         <p>Телефон: + 7 (999) 999 99-99</p>
@@ -43,7 +43,7 @@ function Home() {
                         <img src={groupimg}></img>
                     </div>
                     <div>
-                        <p>Адрес: СПб, Лиговский пр., 62</p>
+                        <p>Невский проспект, дом 90-92Б</p>
                     </div>
                 </div>
             </div>

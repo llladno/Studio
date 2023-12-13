@@ -17,7 +17,6 @@ const LoginPhotos = () => {
         if (err === "ERROR") {
             setmyPhoto("ERROR")
         } else {
-            console.log(res)
             const getPhotos = res.data.files
             setmyPhoto(res.data)
             setLoading(true)
@@ -32,10 +31,8 @@ const LoginPhotos = () => {
     function show(e) {
         e.target.style.display = "none"
         if (loading == true) {
-            console.log(myPhoto)
             let photo = document.getElementsByClassName("photo")[0]
-            console.log(myPhoto)
-            console.log(photo)
+
             for (let c = 0; c < myPhoto.files.length; c++) {
                 photo.innerHTML += `<img src="http://109.68.215.157:3005/photos/${myPhoto.folder}/${myPhoto.files[c]}">`
             }

@@ -33,7 +33,6 @@ function LoginHome() {
     howMuchDays()
 
     async function clickDate(event) {
-        console.log(event.target.tagName)
 
         if (event.target.tagName == "DIV") {
 

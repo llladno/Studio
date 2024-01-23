@@ -1,5 +1,4 @@
-
-exports.elliss = async (event, setSelectData, data, axios, sud, day) => {
+async function Elliss (event, setSelectData, data, axios, sud, day) {
     setSelectData(event.target.textContent + data)
     const selectedDate = await axios.post("http://109.68.215.157:3005/selectedDate", {
         day: event.target.textContent
@@ -14,7 +13,7 @@ exports.elliss = async (event, setSelectData, data, axios, sud, day) => {
         }
     } else {//12, 13
         let mas = []
-        for(let b = 0; b < selectedDate.data.length; b++){
+        for (let b = 0; b < selectedDate.data.length; b++) {
             if (selectedDate.data[b].date.includes("2")) mas[0] = "12:00"
             else if (selectedDate.data[b].date.includes("3")) mas[1] = "13:00"
             else if (selectedDate.data[b].date.includes("4")) mas[2] = "14:00"
@@ -25,8 +24,8 @@ exports.elliss = async (event, setSelectData, data, axios, sud, day) => {
             else if (selectedDate.data[b].date.includes("9")) mas[7] = "19:00"
         }
 
-        for(let c = 0; c < 8; c++){
-            if(mas[c]===undefined){
+        for (let c = 0; c < 8; c++) {
+            if (mas[c] === undefined) {
                 sud.innerHTML += `
                     <button class="btnunselected">${c + 1} ${time2 + c}:00</button>`
             }
@@ -76,3 +75,7 @@ exports.elliss = async (event, setSelectData, data, axios, sud, day) => {
     // }
 
 }
+
+export default Elliss
+
+

@@ -1,8 +1,8 @@
 import axios from "axios";
 import Bar from "../../mainPage/Bar";
 import { useState } from "react";
-import { elliss } from "../../mainPage/elliss.jsx";
 import { showFn } from "./showFn.jsx";
+import Elliss from "../../mainPage/Elliss";
 
 
 function LoginHome() {
@@ -58,7 +58,7 @@ function LoginHome() {
                 day = event.target.textContent
                 sendDataa = document.getElementsByClassName('sendData')[0]
                 sendDataa.style.display = 'flex'
-                elliss(event, setSelectData, data, axios, sud, selectData, day)
+                Elliss(event, setSelectData, data, axios, sud, selectData, day)
             }
         }
     }
